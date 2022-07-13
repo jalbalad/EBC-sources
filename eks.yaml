@@ -1,0 +1,26 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: my-test
+  region: us-west-2
+
+vpc:
+  id: "vpc-11111"
+  subnets:
+    private:
+      us-west-2a:
+          id: "subnet-0ff156e0c4a6d300c"
+      us-west-2c:
+          id: "subnet-0426fb4a607393184"
+    public:
+      us-west-2a:
+          id: "subnet-0153e560b3129a696"
+      us-west-2c:
+          id: "subnet-009fa0199ec203c37"
+nodeGroups:
+  - name: ng-1-workers
+    labels: { role: workers }
+    instanceType: t2.medium
+    desiredCapacity: 2
+    privateNetworking: true
