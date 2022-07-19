@@ -4,6 +4,7 @@ kind: ClusterConfig
 metadata:
   name: my-test
   region: us-west-2
+  version: '1.19'
 
 vpc:
   id: "vpc-11111"
