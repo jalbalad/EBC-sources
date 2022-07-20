@@ -2,7 +2,7 @@ apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
 metadata:
-  name: my-test
+  name: eks-ebc
   region: us-west-2
   version: '1.21'
 
